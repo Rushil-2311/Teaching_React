@@ -1,22 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { data } from "./MOCK_DATA";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div className="work" style={{ height: "100%", width: "100%" }}>
+          {data?.map((data) => {
+            return <div>{data.product_name}</div>;
+          })}
+        </div>
       </header>
     </div>
   );

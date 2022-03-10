@@ -4,6 +4,9 @@
   box-sizing: border-box;
   color: var(--color-light);
 }
+a {
+  text-decoration: none;
+}
 :root {
   --color-bg: #1f1f38;
 
@@ -37,7 +40,6 @@
 img {
   height: 50px;
   width: 50px;
-  background: rebeccapurple;
 }
 
 Form {
@@ -53,9 +55,37 @@ Form {
   gap: 3rem;
   padding: 2rem;
 }
+.btn__primary {
+  color: black;
+  background: var(--color-primary);
+  width: 100px;
+  border-radius: 5px;
+  position: relative;
+  left: 18%;
+}
+.btn__primary:hover {
+  background: rgba(9, 187, 98, 0.6);
+}
 .btn__hide {
   color: black;
   background-color: #1f1f38;
   width: 100px;
   border-radius: 5px;
+}
+.search__style {
+  background: var(--color-bg);
+  height: max-content;
+  border-radius: 3rem;
+  text-indent: 20px;
+}
+.function__container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 10px;
+}
+
+.span__cart {
+  color: var(--color-light);
+  background: var(--color-bg);
 }

@@ -1,0 +1,21 @@
+nav {
+  margin: auto 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+  background-color: var(--color-primary);
+}
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+
+  padding: 0px 20px;
+}
+
+.nav__img {
+  margin-left: 2px;
+}

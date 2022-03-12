@@ -1,7 +1,20 @@
-import React from "react";
+import SingleProduct from "../../components/SingleProduct";
 
-const Cart = () => {
-  return <div> i am cart mf</div>;
+const CartPage = ({ cart, setcart }) => {
+  return (
+    <>
+      <span> My cart</span>
+
+      {cart.map((data) => (
+        <SingleProduct
+          data={data}
+          key={data.id}
+          cart={cart}
+          setCart={setcart}
+        />
+      ))}
+    </>
+  );
 };
 
-export default Cart;
+export default CartPage;

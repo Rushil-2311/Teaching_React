@@ -1,26 +1,33 @@
 import Products from "./components/products";
 
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import Cart from "./pages/Cart/Cart";
+
 import Navigation from "./components/Navigation/Navigation";
 import { Button } from "antd";
 import Home from "./pages/Home/Home";
 
 import { useState } from "react";
+import CartPage from "./pages/Cart/Cart";
 
 const App = () => {
+  const [cart, setCart] = useState([]);
   return (
     <>
       <Router>
-        <Navigation count="12" />
+        <Navigation cart={cart} setCart={setCart} />
         <Routes>
-          <Route path="/" component={Home} exact></Route>
+          <Route path="/" element={<Home />} exact></Route>
 
-          <Route path="/products" component={Products}></Route>
+          <Route
+            path="/products"
+            element={<Products cart={cart} setCart={setCart} />}
+          ></Route>
 
-          <Route path="/cart" component={Cart}></Route>
+          <Route
+            path="/cart"
+            element={<CartPage cart={cart} setcart={setCart} />}
+          ></Route>
         </Routes>
-        <Products />
       </Router>
     </>
   );

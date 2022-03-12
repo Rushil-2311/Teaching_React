@@ -2,7 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--color-light);
+  color: rgb(199, 204, 92);
+}
+
+body {
+  background: var(--color-primary);
 }
 a {
   text-decoration: none;

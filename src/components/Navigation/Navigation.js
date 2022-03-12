@@ -1,15 +1,16 @@
 import React from "react";
 import { Link, BrowserRouter as Router } from "react-router-dom";
+
 import "./navigation.css";
 
-const Navigation = (props) => {
+const Navigation = ({ cart, setCart }) => {
   return (
     <>
       <nav>
         <Link to="/">
           <img
-            style={{ height: 45 }}
-            src="https://robohash.org/earumesseest.png?size=50x50&set=set1"
+            style={{ height: 70 }}
+            src="https://robohash.org/voluptasconsequaturomnis.png?size=50x50&set=set1"
             alt="logo"
           />
         </Link>
@@ -18,12 +19,12 @@ const Navigation = (props) => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/products">Products {props.name}</Link>
+            <Link to="/products">Products </Link>
           </li>
           <li>
             <Link to="/cart">
               <div>
-                <span className="span__quantity">{props.count}</span>
+                <span className="span__quantity">{cart.length}</span>
                 <img
                   className="nav__img"
                   src="/image/cart.png"

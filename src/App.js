@@ -1,16 +1,17 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
-import { data } from "./MOCK_DATA";
+import { Route, Routes } from "react-router-dom";
+import Product from "./product/product.js";
+import Cart from "./product/cart.js";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="work" style={{ height: "100%", width: "100%" }}>
-          {data?.map((data) => {
-            return <div>{data.product_name}</div>;
-          })}
-        </div>
+        <Routes>
+          <Route exact path="/" element={<Product />} />
+          <Route exact path="/cart" element={<Cart />} />
+        </Routes>
       </header>
     </div>
   );

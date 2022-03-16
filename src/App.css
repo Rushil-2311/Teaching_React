@@ -71,10 +71,10 @@
 .submit{
   display: flex;
   flex-direction: column;
-  height: 38rem;
+  height: 50rem;
   width : 25rem;
   /* margin-left: 35rem; */
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 5rem;
   justify-content: center;
   align-items: center;
@@ -92,8 +92,56 @@
   background-color: thistle;
 }
 
+.submit .date{
+  width: 20rem;
+  margin-left: 1.9rem;
+  padding: .6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: #61dafb;
+  background-color: thistle;
+}
 .submit button{
   width: 9.5rem;
   padding: .4rem;
   margin: 1rem;
+}
+
+.main{
+  color: #61dafb;
+}
+
+.table{
+  display: flex;
+  flex-direction: column;
+  background-color: #282c34;
+  color: aliceblue;
+  padding: 1.2rem;
+  gap: 1rem;
+}
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+th,td{
+  border: 1px solid white;
+  text-align: left;
+  padding: .8rem;
+  font-size: 1.8rem;
+}
+th{
+  background-color: cadetblue;
+  color: #282c34;
+  /* border: 1px solid ; */
+}
+td{
+  color: thistle;
+}
+
+td a {
+  color: thistle;
+  font-style: normal;
+  text-decoration: none;
 }

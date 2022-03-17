@@ -59,7 +59,98 @@ const Form = () => {
         setItem(sorted);
         settoggleItem(true);
       };
+      const sortDesOrdEmployeeName = () => {
+        const sorted = [...item].sort((a, b) => {
+          return a.employee_name < b.employee_name ? 1 : -1;
+        });
+        setItem(sorted);
+        settoggleItem(true);
+      };
 
+      const sortByBirthday = () => {
+        const sorted = [...item].sort((a, b) => {
+          return a.birthday > b.birthday ? 1 : -1;
+        });
+        setItem(sorted);
+        settoggleItem(true);
+      };
+      const sortDesOrdBirthday = () => {
+        const sorted = [...item].sort((a, b) => {
+          return a.birthday < b.birthday ? 1 : -1;
+        });
+        setItem(sorted);
+        settoggleItem(true);
+      };
+      const sortBySalary = () => {
+        const sorted = [...item].sort((a, b) => {
+          return a.salary > b.salary ? 1 : -1;
+        });
+        setItem(sorted);
+        settoggleItem(true);
+      };
+      const sortDesOrdSalary = () => {
+        const sorted = [...item].sort((a, b) => {
+          return a.salary < b.salary ? 1 : -1;
+        });
+        setItem(sorted);
+        settoggleItem(true);
+      };
+      const sortByJoindDate = () => {
+        const sorted = [...item].sort((a, b) => {
+          return a.joind_date > b.joind_date ? 1 : -1;
+        });
+        setItem(sorted);
+        settoggleItem(true);
+      };
+      const sortdesOrdJoindDate = () => {
+        const sorted = [...item].sort((a, b) => {
+          return a.joind_date < b.joind_date ? 1 : -1;
+        });
+        setItem(sorted);
+        settoggleItem(true);
+      };
+      const sortByPhoneNumber = () => {
+        const sorted = [...item].sort((a, b) => {
+          return a.phone_number > b.phone_number ? 1 : -1;
+        });
+        setItem(sorted);
+        settoggleItem(true);
+      };
+      const sortDesOrdPhoneNumber = () => {
+        const sorted = [...item].sort((a, b) => {
+          return a.phone_number < b.phone_number ? 1 : -1;
+        });
+        setItem(sorted);
+        settoggleItem(true);
+      };
+      const sortByAddress = () => {
+        const sorted = [...item].sort((a, b) => {
+          return a.address > b.address ? 1 : -1;
+        });
+        setItem(sorted);
+        settoggleItem(true);
+      };
+      const sortDesOrdAddress = () => {
+        const sorted = [...item].sort((a, b) => {
+          return a.address < b.address ? 1 : -1;
+        });
+        setItem(sorted);
+        settoggleItem(true);
+      };
+      const sortByWorkingHours = () => {
+        const sorted = [...item].sort((a, b) => {
+          return a.working_hours > b.working_hours ? 1 : -1;
+        });
+        setItem(sorted);
+        settoggleItem(true);
+      };
+      const sortDesOrdWorkingHours = () => {
+        const sorted = [...item].sort((a, b) => {
+          return a.working_hours < b.working_hours ? 1 : -1;
+        });
+        setItem(sorted);
+        settoggleItem(true);
+      };
   const inputEvent = (event) => {
     setAdd({
       ...add,
@@ -221,18 +312,16 @@ const Form = () => {
           }}
           value={search}
         />
-
-<button onClick={sortByEmployeeName}> Sort By Employee Name </button>
           <table>
             <thead>
               <tr>
-                <th>Employee Name</th>
-                <th>BirthDay</th>
-                <th>Salary</th>
-                <th>Phone Number</th>
-                <th>Address</th>
-                <th>Joind Date</th>
-                <th>Working Hours</th>
+                <th onClick={sortByEmployeeName} onDoubleClick={sortDesOrdEmployeeName}>Employee Name</th>
+                <th onClick={sortByBirthday} onDoubleClick={sortDesOrdBirthday}>BirthDay</th>
+                <th onClick={sortBySalary} onDoubleClick={sortDesOrdSalary}>Salary</th>
+                <th onClick={sortByPhoneNumber} onDoubleClick={sortDesOrdPhoneNumber}>Phone Number</th>
+                <th onClick={sortByAddress} onDoubleClick={sortDesOrdAddress}>Address</th>
+                <th onClick={sortByJoindDate} onDoubleClick={sortdesOrdJoindDate}>Joind Date</th>
+                <th onClick={sortByWorkingHours} onDoubleClick={sortDesOrdWorkingHours}>Working Hours</th>
                 <th>Actions</th>
               </tr>
             </thead>

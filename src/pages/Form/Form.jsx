@@ -1,111 +1,75 @@
 import React from "react";
-import { Form, Input, Button, Checkbox, DatePicker, Space, Select } from "antd";
+import { Form, Input, Button, InputNumber } from "antd";
 import "./form.css";
-import { SettingOutlined } from "@ant-design/icons";
 
-const { Option } = Select;
-
-const FormPage = () => {
-  const onFinish = (values) => {
-    console.log("Success:", values);
+const FormPage = ({ product, setProduct }) => {
+  const onSubmitHandler = (value) => {
+    const user = [...product, value];
+    setProduct(user);
   };
-
-  const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
-  };
-  const selectBefore = (
-    <Select defaultValue="add" style={{ width: 60 }}>
-      <Option value="add">+</Option>
-      <Option value="minus">-</Option>
-    </Select>
-  );
-  const selectAfter = (
-    <Select defaultValue="USD" style={{ width: 60 }}>
-      <Option value="USD">$</Option>
-      <Option value="EUR">€</Option>
-      <Option value="GBP">£</Option>
-      <Option value="CNY">¥</Option>
-    </Select>
-  );
-
   return (
     <Form
-      name="basic"
-      labelCol={{
-        span: 8,
+      onFinish={onSubmitHandler}
+      onFinishFailed={(error) => {
+        console.log(error);
       }}
-      wrapperCol={{
-        span: 16,
-      }}
-      initialValues={{
-        remember: true,
-      }}
-      onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
-      autoComplete="off"
     >
       <Form.Item
-        label="Employee name"
-        name="Employee name"
-        rules={[
-          {
-            required: true,
-            message: "Please Employee name!",
-          },
-        ]}
+        name="product_name"
+        label="product_name"
+        rules={[{ required: true }]}
       >
-        <Input />
+        <Input placeholder="Enter product name"></Input>
+      </Form.Item>
+      <Form.Item name="id" label="id" rules={[{ required: true }]}>
+        <Input placeholder="Enter product id"></Input>
+      </Form.Item>
+      <Form.Item name="category" label="category" rules={[{ required: true }]}>
+        <Input placeholder="Enter prodcut_image link"></Input>
+      </Form.Item>
+      <Form.Item name="prodcut_image" label="prodcut_image link">
+        <Input placeholder="prodcut_image"></Input>
       </Form.Item>
       <Form.Item
-        label="Date of birth"
-        name="Date of birth"
-        rules={[
-          {
-            required: true,
-            message: "Please Date of birth",
-          },
-        ]}
+        name="created_at"
+        label="created_at"
+        rules={[{ required: true }]}
       >
-        <DatePicker />
+        <Input placeholder="Enter created time"></Input>
       </Form.Item>
+      <Form.Item name="prodcut_image" label="prodcut_image link">
+        <Input placeholder="prodcut_image"></Input>
+      </Form.Item>
+
       <Form.Item
-        label="Password"
-        name="password"
-        rules={[
-          {
-            required: true,
-            message: "Please input your password!",
-          },
-        ]}
+        name="user_rating"
+        label="user_rating"
+        rules={[{ required: true }]}
       >
-        <Input.Password />
-      </Form.Item>
-      <Space direction="vertical">
-        <InputNumber addonBefore="+" addonAfter="$" defaultValue={100} />
         <InputNumber
-          addonBefore={selectBefore}
-          addonAfter={selectAfter}
-          defaultValue={100}
-        />
-        <InputNumber addonAfter={<SettingOutlined />} defaultValue={100} />
-        <InputNumber
-          addonBefore={
-            <Cascader placeholder="cascader" style={{ width: 150 }} />
-          }
-          defaultValue={100}
-        />
-      </Space>
-      ,
-      <Form.Item name="remember" valuePropName="checked">
-        <Checkbox>Remember me</Checkbox>
+          min={1}
+          max={5}
+          // defaultValue={5}
+          placeholder="Enter user_rating"
+          value="Enter user_rating"
+        ></InputNumber>
       </Form.Item>
+
       <Form.Item
-        wrapperCol={{
-          offset: 8,
-          span: 16,
-        }}
+        name="product_description"
+        label="product_description"
+        rules={[{ required: true }]}
       >
-        <Button type="primary">Submit</Button>
+        <Input
+          placeholder="Enter product_description"
+          value="product_description"
+        ></Input>
+      </Form.Item>
+
+      <Form.Item>
+        <Button type="primary" htmlType="submit" className="btn">
+          Submit
+        </Button>
       </Form.Item>
     </Form>
   );

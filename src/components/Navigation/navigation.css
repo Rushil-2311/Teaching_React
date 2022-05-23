@@ -23,3 +23,12 @@ nav ul li {
 .nav__img {
   margin-left: 2px;
 }
+@media (max-width: 900px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}

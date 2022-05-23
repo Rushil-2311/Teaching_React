@@ -26,7 +26,7 @@ const Navigation = ({ cart, setCart }) => {
           </li>
           <li>
             <Link to="/cart">
-              <div>
+              <div className="div_cart">
                 <span className="span__quantity">{cart.length}</span>
                 <img
                   className="nav__img"

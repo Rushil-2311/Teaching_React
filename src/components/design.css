@@ -73,14 +73,13 @@ Form {
 .btn__hide {
   color: black;
   background-color: #1f1f38;
-  width: 100px;
+
   border-radius: 5px;
 }
 .search__style {
   background: var(--color-bg);
   height: max-content;
   border-radius: 3rem;
-  text-indent: 20px;
 }
 .function__container {
   display: flex;

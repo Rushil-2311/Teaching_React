@@ -1,10 +1,13 @@
 import SingleProduct from "../../components/SingleProduct";
+import "./cart.css";
 
 const CartPage = ({ cart, setcart }) => {
   return (
     <>
-      <span> My cart</span>
-
+      <div className="main__cart">
+        <span className="title"> My cart</span>
+        <p style={{ color: "black" }}> total items : {cart.length} </p>
+      </div>
       {cart.map((data) => (
         <SingleProduct
           data={data}

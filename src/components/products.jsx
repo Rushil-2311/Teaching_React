@@ -2,14 +2,14 @@ import React from "react";
 import { data } from "../MOCK_DATA";
 import { useState, useEffect, useMemo, useContext } from "react";
 import { Form, Button, Input, InputNumber } from "antd";
-import { Link } from "react-router-dom";
+
 import "./design.css";
 import SingleProduct from "./SingleProduct";
 
 const Products = ({ cart, setCart }) => {
   const [product, setProduct] = useState([]);
   const [show, setShow] = useState(false);
-  // const [showData, setShowData] = useState(false);
+
   const [search, setSearch] = useState("");
 
   const onSubmitHandler = (value) => {
@@ -63,19 +63,6 @@ const Products = ({ cart, setCart }) => {
               Short by time
             </Button>
 
-            {/* <div>
-              <div className="btn__main">
-                <Button className="btn__hide" onClick={() => setShowData(true)}>
-                  Load Data
-                </Button>
-                <Button
-                  className="btn__hide"
-                  onClick={() => setShowData(false)}
-                >
-                  Hide Data
-                </Button>
-              </div>
-            </div> */}
             <Input
               className="search__style"
               placeholder="search here"
@@ -90,8 +77,6 @@ const Products = ({ cart, setCart }) => {
                 cart={cart}
                 setCart={setCart}
                 key={data.id}
-                // showData={showData}
-                // setShowData={setShowData}
               />
             ))}
             <div className="btn__main">
@@ -184,3 +169,12 @@ const Products = ({ cart, setCart }) => {
 };
 
 export default Products;
+
+function a() {
+  for (var i = 0; i < 3; i++) {
+    setTimeout(function log() {
+      console.log(i);
+    }, 10);
+  }
+}
+a();

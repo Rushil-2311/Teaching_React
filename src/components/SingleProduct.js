@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./singleproduct.css";
 import { Button } from "antd";
 
-const SingleProduct = ({ data, cart, setCart, showData }) => {
+const SingleProduct = ({ data, cart, setCart }) => {
   return (
     <>
       <div className="data__main ">

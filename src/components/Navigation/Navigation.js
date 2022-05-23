@@ -22,6 +22,9 @@ const Navigation = ({ cart, setCart }) => {
             <Link to="/products">Products </Link>
           </li>
           <li>
+            <Link to="/form">From</Link>
+          </li>
+          <li>
             <Link to="/cart">
               <div>
                 <span className="span__quantity">{cart.length}</span>

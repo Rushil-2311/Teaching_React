@@ -1,0 +1,11 @@
+.main__home {
+  padding: 5rem;
+}
+
+h1 {
+  color: var(--color-bg);
+}
+
+h5 {
+  color: var(--color-light);
+}

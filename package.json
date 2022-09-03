@@ -6,13 +6,22 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",
+<<<<<<< HEAD
     "axios": "^0.26.0",
+=======
+    "antd": "^4.18.9",
+>>>>>>> 700d5bfe50ed520e21c305a4849aad31867f489d
     "react": "^17.0.2",
     "react-datepicker": "^4.7.0",
     "react-dom": "^17.0.2",
+<<<<<<< HEAD
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.2.2",
     "react-scripts": "^5.0.0",
+=======
+    "react-router-dom": "^6.2.2",
+    "react-scripts": "5.0.0",
+>>>>>>> 700d5bfe50ed520e21c305a4849aad31867f489d
     "web-vitals": "^2.1.4"
   },
   "scripts": {

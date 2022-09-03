@@ -1,0 +1,12 @@
+.main__cart {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: xx-large;
+  color: black;
+  text-transform: capitalize;
+}
+
